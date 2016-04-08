@@ -7,13 +7,13 @@
         /// </summary>
         public enum MenuOptionsEnum
         {
-            IngresarCantidadDistritos,
-            IngresarCandidatos,
-            GenerarVotosAleatorios,
-            GanadorPrimerLugarVotaciones,
-            SegundoLugarVotaciones,
-            ImprimirVotacionGeneral,
-            Salir
+            IngresarCantidadDistritos=1,
+            IngresarCandidatos=2,
+            GenerarVotosAleatorios=3,
+            GanadorPrimerLugarVotaciones=4,
+            SegundoLugarVotaciones=5,
+            ImprimirVotacionGeneral=6,
+            Salir=7
         }
     }
 }

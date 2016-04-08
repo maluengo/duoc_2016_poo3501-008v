@@ -42,8 +42,10 @@
   <ItemGroup>
     <Compile Include="Matrix\MatrixMaker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tools\ArrayHelper.cs" />
     <Compile Include="Tools\MenuHelper.cs" />
     <Compile Include="Tools\Validations.cs" />
+    <Compile Include="Votes\RandomVotes.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\voteapp.backend.entities\voteapp.backend.entities.csproj">
@@ -51,9 +53,7 @@
       <Name>voteapp.backend.entities</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Votes\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

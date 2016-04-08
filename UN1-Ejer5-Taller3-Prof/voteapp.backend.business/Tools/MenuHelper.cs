@@ -90,6 +90,25 @@ namespace voteapp.backend.business.Tools
         }
 
         /// <summary>
+        /// Despliega y construye el formato del mensaje de error, por pantalla. 
+        /// </summary>
+        /// <param name="customMessage"></param>
+        /// <returns></returns>
+        public string PrintMessageInfoToUser(string customMessage)
+        {
+            var finalMessage = string.Empty;
+
+            if (!string.IsNullOrEmpty(customMessage))
+
+            {
+                finalMessage = $"[INFO] - {customMessage}\n";
+
+            }
+
+            return finalMessage;
+        }
+
+        /// <summary>
         /// Permite, a partir de un string, castear a un Enum. 
         /// </summary>
         /// <param name="value"></param>
