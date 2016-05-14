@@ -28,15 +28,19 @@
             </TextBox>
         </GroupBox>
         <Button x:Name="btnLoadData" Content="Load" Grid.Column="1" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top" Width="57" Click="btnLoadData_Click"/>
-        <CheckBox x:Name="chkError" Content="Error" Grid.Column="1" HorizontalAlignment="Left" Margin="103,44,0,0" VerticalAlignment="Top"/>
-        <CheckBox x:Name="chkWarn" Content="Warn" Grid.Column="1" HorizontalAlignment="Left" Margin="169,44,0,0" VerticalAlignment="Top"/>
-        <CheckBox x:Name="chkInfo" Content="Info" Grid.Column="1" HorizontalAlignment="Left" Margin="242,44,0,0" VerticalAlignment="Top" />
-        <GroupBox x:Name="groupBox1" Grid.Column="1" Header="Opciones" HorizontalAlignment="Left" Margin="93,10,0,0" VerticalAlignment="Top" Height="56" Width="249"/>
+        <CheckBox x:Name="chkError" Content="Error" Grid.Column="1" HorizontalAlignment="Left" Margin="103,44,0,0" VerticalAlignment="Top" Checked="chkError_Checked"/>
+        <CheckBox x:Name="chkWarn" Content="Warn" Grid.Column="1" HorizontalAlignment="Left" Margin="169,44,0,0" VerticalAlignment="Top" Checked="chkWarn_Checked"/>
+        <CheckBox x:Name="chkInfo" Content="Info" Grid.Column="1" HorizontalAlignment="Left" Margin="242,44,0,0" VerticalAlignment="Top" Checked="chkInfo_Checked" />
+        <GroupBox x:Name="groupBox1" Grid.Column="1" Header="Opciones" HorizontalAlignment="Left" Margin="93,10,0,0" VerticalAlignment="Top" Height="56" Width="240"/>
         <GroupBox x:Name="groupBox2" Header="Acciones" HorizontalAlignment="Left" Margin="10,86,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="80" Width="683"/>
         <Button x:Name="btnStarAnalysis" Content="Comenzar Analisis" HorizontalAlignment="Left" Margin="25,110,0,0" VerticalAlignment="Top" Width="316" Height="46" Click="btnStarAnalysis_Click" IsEnabled="False"/>
         <Button x:Name="btnCleanNewSession" Content="Nueva Sesion de Analisis" Grid.Column="1" HorizontalAlignment="Left" Margin="10,110,0,0" VerticalAlignment="Top" Width="323" Height="46" Click="btnCleanNewSession_Click" IsEnabled="False"/>
-        <GroupBox x:Name="groupBox3" Header="Resultado Analisis" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="1" VerticalAlignment="Top" Height="199" Width="433" Grid.ColumnSpan="2"/>
-        <GroupBox x:Name="groupBox4" Grid.Column="1" Header="Archivos analizados" HorizontalAlignment="Left" Margin="103,0,0,0" Grid.Row="1" VerticalAlignment="Top" Height="199" Width="239"/>
+        <GroupBox x:Name="groupBox3" Header="Resultado Analisis" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="1" VerticalAlignment="Top" Height="199" Width="433" Grid.ColumnSpan="2">
+            <DataGrid x:Name="gvAnalysisInside" HorizontalAlignment="Left" VerticalAlignment="Top" Height="180" Width="413" Margin="0,0,0,-3"/>
+        </GroupBox>
+        <GroupBox x:Name="groupBox4" Grid.Column="1" Header="Archivos analizados" HorizontalAlignment="Left" Margin="103,0,0,0" Grid.Row="1" VerticalAlignment="Top" Height="199" Width="239">
+            <DataGrid x:Name="gvLogsFilesFinded" HorizontalAlignment="Left" VerticalAlignment="Top" Height="178" Width="229" Margin="0,0,-2,-1"/>
+        </GroupBox>
 
     </Grid>
 </Window>
