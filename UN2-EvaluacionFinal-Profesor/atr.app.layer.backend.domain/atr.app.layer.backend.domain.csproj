@@ -40,7 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contracts\IAnalyzisable.cs" />
     <Compile Include="Contracts\IDataLoaderable.cs" />
+    <Compile Include="Core\Logs\Analysis\AnalysisEnginee.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Source\DataLoader.cs" />
   </ItemGroup>

@@ -40,6 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Analysis\LogAnalysisMessageFindedDto.cs" />
+    <Compile Include="Analysis\LogAnalysisResultDto.cs" />
     <Compile Include="Files\AnalysisOptionsDto.cs" />
     <Compile Include="Files\LogDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
