@@ -94,6 +94,16 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\atr.app.layer.backend.domain\atr.app.layer.backend.domain.csproj">
+      <Project>{370C15B6-C18C-40DF-B7A7-FA0D1F2A8692}</Project>
+      <Name>atr.app.layer.backend.domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\atr.app.layer.backend.dto\atr.app.layer.backend.dto.csproj">
+      <Project>{4E00AB54-B624-47B0-88FB-C6173CB814E3}</Project>
+      <Name>atr.app.layer.backend.dto</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

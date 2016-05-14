@@ -50,8 +50,24 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="FileReader\LogInvestigatorTests.cs" />
+    <Compile Include="RepositoryFactoryTests.cs" />
+    <Compile Include="Source\DataLoaderTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\atr.app.layer.backend.domain\atr.app.layer.backend.domain.csproj">
+      <Project>{370C15B6-C18C-40DF-B7A7-FA0D1F2A8692}</Project>
+      <Name>atr.app.layer.backend.domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\atr.app.layer.backend.dto\atr.app.layer.backend.dto.csproj">
+      <Project>{4E00AB54-B624-47B0-88FB-C6173CB814E3}</Project>
+      <Name>atr.app.layer.backend.dto</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\atr.app.layer.backend.repository\atr.app.layer.backend.repository.csproj">
+      <Project>{B576443E-9E18-4A05-9BD1-70276AEF9786}</Project>
+      <Name>atr.app.layer.backend.repository</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
