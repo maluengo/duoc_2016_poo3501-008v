@@ -39,7 +39,7 @@
             <DataGrid x:Name="gvAnalysisInside" HorizontalAlignment="Left" VerticalAlignment="Top" Height="180" Width="413" Margin="0,0,0,-3"/>
         </GroupBox>
         <GroupBox x:Name="groupBox4" Grid.Column="1" Header="Archivos analizados" HorizontalAlignment="Left" Margin="103,0,0,0" Grid.Row="1" VerticalAlignment="Top" Height="199" Width="239">
-            <DataGrid x:Name="gvLogsFilesFinded" HorizontalAlignment="Left" VerticalAlignment="Top" Height="178" Width="229" Margin="0,0,-2,-1"/>
+            <DataGrid x:Name="gvLogsFilesFinded" HorizontalAlignment="Left" VerticalAlignment="Top" Height="178" Width="229" Margin="0,0,-2,-1" SelectionChanged="gvLogsFilesFinded_SelectionChanged"/>
         </GroupBox>
 
     </Grid>

@@ -2,10 +2,14 @@
 using atr.app.layer.backend.dto.Files;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Windows;
+using System.Windows.Controls;
 using atr.app.layer.backend.domain.Contracts;
+using atr.app.layer.backend.domain.Core.Logs.Analysis;
 using atr.app.layer.backend.domain.Source;
+using atr.app.layer.backend.dto.Analysis;
 
 namespace atr.app.layer.front.wpf
 {
@@ -16,6 +20,7 @@ namespace atr.app.layer.front.wpf
     {
         private IEnumerable<LogDto> _logsCollectionsDto = null;
         private AnalysisOptionsDto _analysisOptionsDto  = null;
+        private IEnumerable<LogAnalysisResultDto> _finalAnalysisResultDtos = null;
 
 
         public MainWindow()
@@ -92,14 +97,51 @@ namespace atr.app.layer.front.wpf
 
         void RunAnalysis()
         {
+            IAnalyzisable objAnalysis = new AnalysisEnginee();
+            _finalAnalysisResultDtos = objAnalysis.GetResultsConsolidated(_logsCollectionsDto, _analysisOptionsDto);
+
+            if (object.ReferenceEquals(_finalAnalysisResultDtos, null))
+            {
+                MessageBox.Show("Ha ocurrido un error al efectuar el análisis.", "Error", MessageBoxButton.OK);
+            }
+            else
+            {
+                if (!_finalAnalysisResultDtos.Any())
+                {
+                    MessageBox.Show("De acuerdo a las opciones ingresadas, no se han detectado resultados válidos. ", "Error", MessageBoxButton.OK);
+                }
+                else
+                {   
+                    MessageBox.Show($"Se han encontrado {_finalAnalysisResultDtos.Count()} archivos Log a analizar. Seleccione cualquiera para ver el detalle", "Info", MessageBoxButton.OK);
+
+
+                }
+            }       
+        }
+
+        void BindSelectedResultsByLog(LogDto objLogSelected)
+        {
+            if (!object.ReferenceEquals(objLogSelected, null))
+            {
+                IAnalyzisable objAnalyzisable = new AnalysisEnginee();
+                gvAnalysisInside.ItemsSource = null;
+                gvAnalysisInside.ItemsSource = objAnalyzisable.GetSelectedMessagesInLogsByFile(objLogSelected, _finalAnalysisResultDtos);
+
+            }
             
         }
+
 
 
         #endregion
 
 
         #region Client Side Events
+
+        private void gvLogsFilesFinded_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+            BindSelectedResultsByLog((LogDto)gvLogsFilesFinded.SelectedItem);
+        }
 
         private void btnStarAnalysis_Click(object sender, RoutedEventArgs e)
         {
@@ -175,6 +217,7 @@ namespace atr.app.layer.front.wpf
             }
 
         }
+
 
         #endregion
 

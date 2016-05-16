@@ -12,6 +12,9 @@ namespace atr.app.layer.backend.domain.Contracts
         IEnumerable<LogAnalysisResultDto> GetResultsConsolidated(IEnumerable<LogDto> objLogToAnalyze,
             AnalysisOptionsDto searchOptions);
 
+        IEnumerable<LogAnalysisMessageFindedDto> GetSelectedMessagesInLogsByFile(LogDto objLog,
+            IEnumerable<LogAnalysisResultDto> allFilesWithResults);
+
 
 
 
