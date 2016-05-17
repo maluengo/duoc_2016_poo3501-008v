@@ -1,13 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.IO;
 
 namespace layer.backend.fakeRepository.Contracts
 {
-    interface IFileReaderable
+    public interface IFileReaderable
     {
+        IEnumerable<FileInfo> GetAllFilesFromPath(string path);
+        IEnumerable<FileInfo> GetOnlyLogFiles(string path);
 
     }
 }
