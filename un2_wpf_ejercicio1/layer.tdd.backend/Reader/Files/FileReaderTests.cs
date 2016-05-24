@@ -1,4 +1,5 @@
-﻿using layer.backend.fakeRepository.Contracts;
+﻿using System.Linq;
+using layer.backend.fakeRepository.Contracts;
 using layer.backend.fakeRepository.Reader.Files;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -25,12 +26,24 @@ namespace layer.tdd.backend.Reader.Files
 
 
 
+
         }
 
         [TestMethod()]
         public void GetOnlyLogFilesTest()
         {
-            Assert.Fail();
+            IFileReaderable objTest = new FileReader();
+
+
+            var test1 = objTest.GetOnlyLogFiles(@"D:\Dropbox\SOURCE-GitHub\poo3501\logs");
+            var test2 = objTest.GetOnlyLogFiles(null);
+            var test3 = objTest.GetOnlyLogFiles(string.Empty);
+
+            Assert.IsNull(test2);
+            Assert.IsNull(test3);
+            Assert.IsTrue(test1.Count().Equals( 11));
+
+
         }
     }
 }

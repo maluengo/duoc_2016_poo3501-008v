@@ -95,6 +95,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\layer.backend.fakeRepository\layer.backend.fakeRepository.csproj">
+      <Project>{EC898B12-AE0D-4462-913D-C911ADFF85E8}</Project>
+      <Name>layer.backend.fakeRepository</Name>
+    </ProjectReference>
     <ProjectReference Include="..\layer.tdd.backend\layer.tdd.backend.csproj">
       <Project>{1251b234-1775-473c-bcf8-9eb8bbd8329b}</Project>
       <Name>layer.tdd.backend</Name>

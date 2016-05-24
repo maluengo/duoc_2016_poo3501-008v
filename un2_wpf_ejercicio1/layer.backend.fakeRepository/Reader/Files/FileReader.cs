@@ -38,11 +38,14 @@ namespace layer.backend.fakeRepository.Reader.Files
             {
                 try
                 {
-                    isValid = File.Exists(path);
+                    isValid = Directory.Exists(path);
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
-                    
+                    //Usar su gestor de log favorito. 
+                    //(nlog, log4net)
+                    //if(!object.ReferenceEquals(ex.InnerException))
+
                 }
 
             }    
@@ -68,9 +71,43 @@ namespace layer.backend.fakeRepository.Reader.Files
             
         }
 
+        /// <summary>
+        /// Obtener solo archivos con extension .Log. 
+        /// </summary>
+        /// <param name="path"></param>
+        /// <returns></returns>
         public IEnumerable<FileInfo> GetOnlyLogFiles(string path)
         {
-            throw new System.NotImplementedException();
+            //List<FileInfo> collectionResult = default(List<FileInfo>);
+
+            //if (this.IsPathValid(path))
+            //{
+            //    var auxDirectory = this.LoadDirectory(path);
+
+            //    if (!object.ReferenceEquals(auxDirectory, null))
+            //    {
+            //        collectionResult = auxDirectory.GetFiles().ToList()
+            //            .Where(x=> string.Equals(x.Extension, 
+            //            ".log", StringComparison.InvariantCulture))
+            //            .ToList();
+
+
+            //    }
+            //}
+
+            List<FileInfo> collectionResult = default(List<FileInfo>);
+
+            if (!string.IsNullOrEmpty(path))
+            {
+                collectionResult = this.GetAllFilesFromPath(path).Where
+                (x => string.Equals(x.Extension, ".log",
+                    StringComparison.InvariantCulture)).ToList();
+            }
+
+
+            return collectionResult;
+
         }
+
     }
 }
