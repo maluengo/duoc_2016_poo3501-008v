@@ -109,5 +109,14 @@ namespace layer.backend.fakeRepository.Reader.Files
 
         }
 
+        /// <summary>
+        /// ATR: método generar un filtro según criterio. 
+        /// </summary>
+        /// <param name="predicate"></param>
+        /// <returns></returns>
+        public IEnumerable<FileInfo> GetFilteredCollection(string predicate, List<FileInfo> collectionFromApp )
+        {
+            throw new NotImplementedException();
+        }
     }
 }

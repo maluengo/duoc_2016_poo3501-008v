@@ -8,5 +8,7 @@ namespace layer.backend.fakeRepository.Contracts
         IEnumerable<FileInfo> GetAllFilesFromPath(string path);
         IEnumerable<FileInfo> GetOnlyLogFiles(string path);
 
+        IEnumerable<FileInfo> GetFilteredCollection(string predicate, List<FileInfo> collectionFromApp);
+
     }
 }

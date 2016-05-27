@@ -9,7 +9,11 @@
     <Grid>
         <TextBox x:Name="txtPath" HorizontalAlignment="Left" Height="23" Margin="26,23,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="323"/>
         <Button x:Name="btnLoad" Content="Load" HorizontalAlignment="Left" Margin="379,23,0,0" VerticalAlignment="Top" Width="108" Height="23" Click="btnLoad_Click"/>
-        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Margin="26,77,0,0" VerticalAlignment="Top" Height="211" Width="368"/>
+        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Margin="26,120,0,0" VerticalAlignment="Top" Height="168" Width="368" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Archivo" Binding="{Binding}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
 
     </Grid>
 </Window>

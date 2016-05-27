@@ -53,7 +53,7 @@ namespace layer.frontend.wfp
                     //    .Select(x=> x.FullName).ToList();
 
                     var auxList = files.ToList()
-                        .Select(x => x.FullName).ToList();
+                        .Select(x => x.Name).ToList();
 
                     //foreach (var item in files.ToList())
                     //{

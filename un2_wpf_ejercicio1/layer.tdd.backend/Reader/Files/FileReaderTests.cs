@@ -3,6 +3,19 @@ using layer.backend.fakeRepository.Contracts;
 using layer.backend.fakeRepository.Reader.Files;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
+namespace layer.backend.fakeRepository.Reader.Files.Tests
+{
+    [TestClass()]
+    public class FileReaderTests
+    {
+        [TestMethod()]
+        public void GetFilteredCollectionTest()
+        {
+            Assert.Fail();
+        }
+    }
+}
+
 namespace layer.tdd.backend.Reader.Files
 {
     [TestClass()]
