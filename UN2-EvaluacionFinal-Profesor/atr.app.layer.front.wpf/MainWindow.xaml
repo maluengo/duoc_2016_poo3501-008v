@@ -1,0 +1,46 @@
+﻿<Window x:Class="atr.app.layer.front.wpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:atr.app.layer.front.wpf"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="416" Width="723">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="16*"/>
+            <RowDefinition Height="19*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="254*"/>
+            <ColumnDefinition Width="263*"/>
+        </Grid.ColumnDefinitions>
+        <GroupBox x:Name="groupBox" Header="Seleccionar Fuente" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="56" Width="420">
+            <TextBox x:Name="txtSource" IsEnabled="True" HorizontalAlignment="Left" Height="23" Margin="0,10,0,0" TextWrapping="Wrap" Text="Select source" VerticalAlignment="Top" Width="335" RenderTransformOrigin="0.5,0.5">
+                <TextBox.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-0.17"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </TextBox.RenderTransform>
+            </TextBox>
+        </GroupBox>
+        <Button x:Name="btnLoadData" Content="Load" Grid.Column="1" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top" Width="57" Click="btnLoadData_Click"/>
+        <CheckBox x:Name="chkError" Content="Error" Grid.Column="1" HorizontalAlignment="Left" Margin="103,44,0,0" VerticalAlignment="Top" Checked="chkError_Checked"/>
+        <CheckBox x:Name="chkWarn" Content="Warn" Grid.Column="1" HorizontalAlignment="Left" Margin="169,44,0,0" VerticalAlignment="Top" Checked="chkWarn_Checked"/>
+        <CheckBox x:Name="chkInfo" Content="Info" Grid.Column="1" HorizontalAlignment="Left" Margin="242,44,0,0" VerticalAlignment="Top" Checked="chkInfo_Checked" />
+        <GroupBox x:Name="groupBox1" Grid.Column="1" Header="Opciones" HorizontalAlignment="Left" Margin="93,10,0,0" VerticalAlignment="Top" Height="56" Width="240"/>
+        <GroupBox x:Name="groupBox2" Header="Acciones" HorizontalAlignment="Left" Margin="10,86,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="80" Width="683"/>
+        <Button x:Name="btnStarAnalysis" Content="Comenzar Analisis" HorizontalAlignment="Left" Margin="25,110,0,0" VerticalAlignment="Top" Width="316" Height="46" Click="btnStarAnalysis_Click" IsEnabled="False"/>
+        <Button x:Name="btnCleanNewSession" Content="Nueva Sesion de Analisis" Grid.Column="1" HorizontalAlignment="Left" Margin="10,110,0,0" VerticalAlignment="Top" Width="323" Height="46" Click="btnCleanNewSession_Click" IsEnabled="False"/>
+        <GroupBox x:Name="groupBox3" Header="Resultado Analisis" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="1" VerticalAlignment="Top" Height="199" Width="433" Grid.ColumnSpan="2">
+            <DataGrid x:Name="gvAnalysisInside" HorizontalAlignment="Left" VerticalAlignment="Top" Height="180" Width="413" Margin="0,0,0,-3"/>
+        </GroupBox>
+        <GroupBox x:Name="groupBox4" Grid.Column="1" Header="Archivos analizados" HorizontalAlignment="Left" Margin="103,0,0,0" Grid.Row="1" VerticalAlignment="Top" Height="199" Width="239">
+            <DataGrid x:Name="gvLogsFilesFinded" HorizontalAlignment="Left" VerticalAlignment="Top" Height="178" Width="229" Margin="0,0,-2,-1" SelectionChanged="gvLogsFilesFinded_SelectionChanged"/>
+        </GroupBox>
+
+    </Grid>
+</Window>

@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Capa.Frontend", "Capa.Frontend", "{DC1150A0-8F25-4EFA-8C72-549B4042404F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Capa.Backend", "Capa.Backend", "{CC9F61BB-A3DF-43F6-8C10-82DA8F81E046}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "consoleApp", "consoleApp\consoleApp.csproj", "{A62D96A2-D332-4680-BD5F-04CF8083CA90}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Backend", "Backend\Backend.csproj", "{7309DDB6-517C-474D-A2D8-3B8933AE02F6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A62D96A2-D332-4680-BD5F-04CF8083CA90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A62D96A2-D332-4680-BD5F-04CF8083CA90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A62D96A2-D332-4680-BD5F-04CF8083CA90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A62D96A2-D332-4680-BD5F-04CF8083CA90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7309DDB6-517C-474D-A2D8-3B8933AE02F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7309DDB6-517C-474D-A2D8-3B8933AE02F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7309DDB6-517C-474D-A2D8-3B8933AE02F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7309DDB6-517C-474D-A2D8-3B8933AE02F6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A62D96A2-D332-4680-BD5F-04CF8083CA90} = {DC1150A0-8F25-4EFA-8C72-549B4042404F}
+		{7309DDB6-517C-474D-A2D8-3B8933AE02F6} = {CC9F61BB-A3DF-43F6-8C10-82DA8F81E046}
+	EndGlobalSection
+EndGlobal
